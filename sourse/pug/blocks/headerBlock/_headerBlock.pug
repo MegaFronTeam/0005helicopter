@@ -1,10 +1,26 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		//- +e.video-wrap
+		video(loading='lazy' preload='auto' no-controls  autoplay  loop  playsinline  muted  )
+			source(src="video/video.webp" type='video/webp')
+			source(src="video/video.mp4" type='video/mp4')
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			h1 Комплектующие и&nbsp;ремонт Авиатехники от&nbsp;профессионалов
+			+e.slider--js.swiper
+				.swiper-wrapper 
+					mixin item(i,t, ...l)
+						+e.slide.swiper-slide
+							+e.item()
+								+img(`prod-${i}.png`)
+								if l
+									+e.labels
+										each lab in l
+											+e.label= lab
+								+e.title(data-title= t)!= t
+									+e.icon-wrap
+										+icon("arrow-right")
+					+item(`1`,`Вертолеты`,'Ми 8 ','Ми 26','Ка 32','ЕС','Bell')
+					+item(`2`,`Самолеты`,'DA-40/42','L 410','Boeing','Airbus')
+					+item(`3`,`Беспилотники`)
 	// end headerBlock

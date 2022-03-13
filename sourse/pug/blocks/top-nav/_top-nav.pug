@@ -21,13 +21,10 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+			+e.inner
+				.row 
+					.col
+						+logo()
+					.col-auto
+						+e.tel.text-body(href="tel:+74956658899") +7 495 665 88 99
 	// end top-nav

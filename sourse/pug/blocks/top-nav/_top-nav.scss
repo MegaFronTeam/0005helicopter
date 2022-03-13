@@ -1,18 +1,22 @@
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+	.row{
+		align-items: center;
+	}
+	&__inner{
+		border-bottom: 1px solid #000;
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+	&__tel{
+		font-weight: bold;
+		font-size: 14px;
 	}
 
-	@include media-breakpoint-up(lg) {
-		background-color: red;
-
-	}
-	p{
-		@include ell();
-	}
 
 	@include media-breakpoint-up(md) {}
 
