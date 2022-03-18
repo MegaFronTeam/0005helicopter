@@ -7,6 +7,7 @@
 	z-index: 2;
 	padding-top: rem(77 + 72);
 	padding-bottom: rem(77);
+	color: #fff;
 	video{
 		@include a-cent;
 		z-index: -1;
@@ -113,6 +114,7 @@
 		position: relative;
 		@include mt(.6s);
 		transform: translateY(var(--x, 0));
+		color: $body-color;
 		&::before{
 			content: attr(data-title);
 			color: #FFFFFF; 
